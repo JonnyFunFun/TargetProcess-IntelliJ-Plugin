@@ -1,0 +1,51 @@
+<idea-plugin version="2">
+  <id>com.targetprocess.intellij</id>
+  <name>TargetProcess Plugin</name>
+  <version>0.1</version>
+  <vendor email="jonathan@targetprocess.com" url="http://www.targetprocess.com">TargetProcess, Inc.</vendor>
+
+  <description><![CDATA[
+      The TargetProcess IntelliJ plugin provides an interface between TargetProcess and an IntelliJ-based IDE, allowing
+      you to:<br>
+      <ul>
+      <li>View your ToDo list in your IDE</li>
+      <li>Update states of your work items</li>
+      <li>Add comments to an entity in TargetProcess</li>
+      <li>Easily open the TargetProcess UI to view more information about an item</li>
+      <li>and more!</li>
+      </ul>
+      ]]></description>
+
+  <change-notes><![CDATA[
+      <strong>v0.1</strong>
+      <small>Initial release.</small>
+      ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <projectConfigurable implementation="com.targetprocess.intellij.config.TargetProcessProjectConfigurable"></projectConfigurable>
+    <applicationConfigurable implementation="com.targetprocess.intellij.config.TargetProcessConfigurable"></applicationConfigurable>
+  </extensions>
+</idea-plugin>
